@@ -1,0 +1,24 @@
+.menuA{
+    background-color:#ffffff;
+    position:relative;
+    word-wrap:break-word;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.mbrarrow {
+    position: absolute;
+    bottom: -200px;
+    left: 45%;
+    width: 60px;
+    height: 60px;
+    cursor: progress;
+    /* background-color: rgba(80, 80, 80, 0.5); */
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.footerr{
+    background-color: black;
+}
