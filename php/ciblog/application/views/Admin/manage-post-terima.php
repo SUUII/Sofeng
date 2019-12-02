@@ -97,9 +97,10 @@
                                             <tr>
                                                 <th style="width: 3%;">token</th>
                                                 <th style="width: 3%;">Nama</th>
-                                                <th style="width: 3%;">Hutang</th>
-                                                <th style="width: 3%;">Lama</th>
-                                                <th style="width: 3%;">Tangal_daftar</th>
+                                                <th style="width: 3%;">Hutang Awal</th>
+                                                <th style="width: 3%;">Terbayar</th>
+                                                <th style="width: 3%;">Sisa Hutang</th>
+                                                <th style="width: 3%;">Jatuh Tempo</th>
                                                 <th style="width: 5%; text-align: center;">Action</th>
                                             </tr>
                                         </thead>
@@ -117,15 +118,21 @@
                                                             } else {
                                                                 echo $dt->hutang;
                                                             } ?></td>
-                                                    <td><?php if ($dt->lama == null) {
+                                                    <td><?php if ($this->M_transaksi->getTotal($dt -> token) == null) {
                                                                 echo '-';
                                                             } else {
-                                                                echo $dt->lama;
+                                                                echo $this->M_transaksi->getTotal($dt -> token);
+                                                            } ?></td>
+                                                    <td><?php if ($this->M_transaksi->getTotal($dt -> token) == null) {
+                                                                echo $dt->hutang;
+                                                            } else {
+                                                                echo $dt->hutang-$this->M_transaksi->getTotal($dt -> token);
                                                             } ?></td>
                                                     <td><?php if ($dt->tangal_daftar == null) {
                                                                 echo '-';
                                                             } else {
-                                                                echo $dt->tangal_daftar;
+                                                                    $offset = $dt -> lama; 
+                                                                    echo date('d-m-Y H:i:s', strtotime("+$offset months", strtotime($dt -> tangal_daftar)));
                                                             } ?></td>     
                                                     <td style="text-align: center;"> 
                                                         <a href="<?php echo site_url('admin/Manage_transaksi/bayar_tagihan/' . $dt->token) ?>" class="btn btn-small">

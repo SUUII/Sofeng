@@ -45,26 +45,13 @@
 }
  </style>
 </head>
+
 <div class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="page-title-box">
                                 <h4 class="page-title">Event </h4>
-                                <ol class="breadcrumb p-0 m-0">
-                                    <li>
-                                        <a href="#">Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Manage Post</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Manage Post</a>
-                                    </li>
-                                    <li class="active">
-                                        Detail Event
-                                    </li>
-                                </ol>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
@@ -74,26 +61,33 @@
                         <div class="col-sm-12" style="font-size: 18px">
                             <div class="card-box">
                                 <div class="table-responsive">
-                                    <div class="col-sm-2">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">Token</li>
-                                            <li class="list-group-item">Hutang</li>
-                                            <li class="list-group-item">Terbayar</li>
-                                            <li class="list-group-item">Sisa Hutang</li>
-                                            <br>
-                                            <li class="list-group-item">Detail :</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">: <?= $data->token ?></li>
-                                            <li class="list-group-item">: Rp. <?= $data->hutang ?></li>
-                                            <li class="list-group-item">: Rp. <?= $total ?></li>
-                                            <li class="list-group-item">: Rp. <?= $data->hutang - $total ?></li>
-                                        </ul>
-                                    </div>
-                                    <?php if($penanda == 1){
-										?>
+                                    <?php if($penanda == 1){ ?> </li>
+                                        <div class="col-sm-2">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Token</li>
+                                                <li class="list-group-item">Nama</li>
+                                                <li class="list-group-item">Hutang</li>
+                                                <li class="list-group-item">Terbayar</li>
+                                                <li class="list-group-item">Sisa Hutang</li>
+                                                <li class="list-group-item">Jatuh Tempo</li>
+                                                <br>
+                                                <li class="list-group-item">Detail :</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">: <?= $data->token ?></li>
+                                                <li class="list-group-item">: <?= $data->nama ?></li>
+                                                <li class="list-group-item">: Rp. <?= $data->hutang ?></li>
+                                                <li class="list-group-item">: Rp. <?= $total ?></li>
+                                                <li class="list-group-item">: Rp. <?= $data->hutang - $total ?></li>
+                                                <li class="list-group-item">: 
+                                                    <?php 
+                                                    $offset = $data -> lama; 
+                                                    echo date('d-m-Y H:i:s', strtotime("+$offset months", strtotime($data -> tangal_daftar)));
+                                                ?>
+                                            </ul>
+                                        </div>
 										<div class="container">
 											<table class="table table-colored table-centered table-inverse m-0" border="1">
 										        <thead>
@@ -128,7 +122,39 @@
 										        </tbody>
 										    </table>
 										</div>
-									<?php } ?>
+									<?php }else{ ?> 
+                                        <div class="col-sm-2">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">Token</li>
+                                                <li class="list-group-item">Hutang</li>
+                                                <li class="list-group-item">Terbayar</li>
+                                                <li class="list-group-item">Sisa Hutang</li>
+                                                <br>
+                                                <li class="list-group-item">Detail :</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">: <?= $data->token ?></li>
+                                                <li class="list-group-item">: Rp. <?= $data->hutang ?></li>
+                                                <li class="list-group-item">: Rp. 0</li>
+                                                <li class="list-group-item">: Rp. <?= $data->hutang?></li>
+                                            </ul>
+                                        </div>
+                                        <div class="container">
+                                            <table class="table table-colored table-centered table-inverse m-0" border="1">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 3%;" class="noselect">Kode Transaksi</th>
+                                                        <th style="width: 3%;" class="noselect">Nominal Pembayaran</th>
+                                                        <th style="width: 3%;" class="noselect">Tanggal Pembayaran</th>
+                                                        <th style="width: 3%;" class="noselect">Pegawai Pengurus</th>
+                                                        <th style="width: 5%; text-align: center;" class="noselect">Action</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>

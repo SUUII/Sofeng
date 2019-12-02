@@ -85,6 +85,7 @@ class Manage_post extends CI_Controller
     public function flagdua()
     {
         $data['data'] = $this->M_add_post->getflagdua();
+        $this->load->model('admin/M_transaksi');
         $this->load->view('admin/manage-post-terima', $data);
     }
     public function flagtiga()
@@ -95,6 +96,7 @@ class Manage_post extends CI_Controller
     public function lunas()
     {
         $data['data'] = $this->M_add_post->getlunas();
+        $this->load->model('admin/M_transaksi');
         $this->load->view('admin/manage-post-lunas', $data);
     }
     public function formedit($id)

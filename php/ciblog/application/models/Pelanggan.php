@@ -11,9 +11,13 @@ class Pelanggan extends CI_Model{
         $this->alamat = $post['alamat'];
         $this->telp = (int)$post['telp'];
         $this->email = $post['email'];
-        $this->hutang = (int)$post['hutang'];
+        $hutang = (int)$post['hutang'];
+        for ($index = 0; $index < (int)$post['lama']; $index++) {
+          $hutang += ($hutang*0.04);
+        }
+        $this->hutang = $hutang;
         $this->lama = (int)$post['lama'];
-        $this->bunga = (int)$post['hutang']/(int)$post['lama']/100;
+        $this->bunga = $hutang-(int)$post['hutang'];
         $this->deskripsi = $post['deskripsi'];
         $this->_uploadImage('diri');
         $this->_uploadImage('ktp');

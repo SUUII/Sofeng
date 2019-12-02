@@ -69,20 +69,20 @@
                                 <div class="table-responsive">
                                     <div class="col-sm-2">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">token</li>
-                                            <li class="list-group-item">nama</li>
-                                            <li class="list-group-item">alamat</li>
-                                            <li class="list-group-item">telp</li>
-                                            <li class="list-group-item">email</li>
-                                            <li class="list-group-item">hutang</li>
-                                            <li class="list-group-item">lama</li>
-                                            <li class="list-group-item">bunga</li>
-                                            <li class="list-group-item">tangal_daftar</li>
-                                            <li class="list-group-item">statktp</li>
-                                            <li class="list-group-item">statslip</li>
-                                            <li class="list-group-item">statkk</li>
-                                            <li class="list-group-item">statjaminan</li>
-                                            <li class="list-group-item">flag</li>
+                                            <li class="list-group-item">Token</li>
+                                            <li class="list-group-item">Nama</li>
+                                            <li class="list-group-item">Alamat</li>
+                                            <li class="list-group-item">Nomer Telpon</li>
+                                            <li class="list-group-item">Email</li>
+                                            <li class="list-group-item">Jumlah Pinjaman</li>
+                                            <li class="list-group-item">Lama meminjam</li>
+                                            <li class="list-group-item">Bunga</li>
+                                            <li class="list-group-item">Tanggal Daftar</li>
+                                            <li class="list-group-item">Status KTP</li>
+                                            <li class="list-group-item">Status Slip Gaji</li>
+                                            <li class="list-group-item">Status KK</li>
+                                            <li class="list-group-item">Status Jaminan</li>
+                                            <li class="list-group-item">Status</li>
                                             <li class="list-group-item">Deskripsi</li>
                                         </ul>
                                     </div>
@@ -93,7 +93,7 @@
                                             <li class="list-group-item">: <?= $data->alamat ?></li>
                                             <li class="list-group-item">: <?= $data->telp ?></li>
                                             <li class="list-group-item">: <?= $data->email ?></li>
-                                            <li class="list-group-item">: <?= $data->hutang ?></li>
+                                            <li class="list-group-item">: <?= $data->hutang-$data->bunga ?></li>
                                             <li class="list-group-item">: <?= $data->lama ?></li>
                                             <li class="list-group-item">: <?= $data->bunga ?></li>
                                             <li class="list-group-item">: <?= $data->tangal_daftar ?></li>

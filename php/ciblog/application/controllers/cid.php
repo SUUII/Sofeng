@@ -47,11 +47,14 @@ class cid extends CI_Controller
                 $this->load->view('pelanggan/templates/footer');
             }else if($data['data'] -> flag == 3){
                 $this->load->view('pelanggan/templates/headerv2',$data);
-                $this->load->view('pelanggan/hasilcid-tolak');
+                $this->load->view('pelanggan/hasilcid-tolak', $data);
                 $this->load->view('pelanggan/templates/footer');
             }else if($data['data'] -> flag == 4){
+                 if($data['transaksi'] = $this->M_transaksi->getBytoken($token)){
+                    $data['total'] = $this->M_transaksi->getTotal($token);
+                }
                 $this->load->view('pelanggan/templates/headerv2',$data);
-                $this->load->view('pelanggan/hasilcid-lunas');
+                $this->load->view('pelanggan/hasilcid-lunas',$data);
                 $this->load->view('pelanggan/templates/footer');
             }
            

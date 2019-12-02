@@ -97,7 +97,7 @@
                                             <tr>
                                                 <th style="width: 3%;">token</th>
                                                 <th style="width: 3%;">Nama</th>
-                                                <th style="width: 3%;">Nominal Pinjaman</th>
+                                                <th style="width: 3%;">Nominal Hutang</th>
                                                 <th style="width: 3%;">Nomer Telpon</th>
                                                 <th style="width: 3%;">Email</th>
                                                 <th style="width: 5%; text-align: center;">Action</th>

@@ -31,7 +31,7 @@
             <div class="form-group row" style="border:1px solid black; border-radius: 100px">
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control-plaintext" id="email" name='email' value="" required>
+                    <input type="text" class="form-control-plaintext" id="email" name='email' value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
             </div>
             <div class="form-group row" style="border:1px solid black; border-radius: 100px">
