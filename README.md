@@ -4,9 +4,7 @@ https://suuiii.com/ezkredit/ (pelanggan)
 
 https://suuiii.com/ezkredit/admin (pegawai dengan username a dan password a)
 
-
-
-
+<br>
 untuk menjalankan code yang sudah saya submit harus memiliki aplikasi xampp
 bisa di download di https://www.apachefriends.org/download.html lalu diinstal di direktori C:
 
