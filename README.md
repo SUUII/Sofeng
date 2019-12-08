@@ -21,7 +21,7 @@ setup ezkredit
 3. buka file htdocs (kalo tidak ada buat baru secara manual)
 4. paste file ezkredit disana
 
-run web
+run website
 1. buka xampp-control
 2. start yang apache dan mysql (tidak usah jika tadi masih belom di stop)
 3. buka browser lalu masukan <br>
