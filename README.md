@@ -26,9 +26,8 @@ setup ezkredit
 run web
 1. buka xampp-control
 2. start yang apache dan mysql (tidak usah jika tadi masih belom di stop)
-3. buka browser lalu masukan
-3.1. http://localhost/ezkredit/ (pelanggan)
-
+3. buka browser lalu masukan <br>
+3.1. http://localhost/ezkredit/ (pelanggan)<br>
 3.2. http://localhost/ezkredit/admin (pegawai dengan username a dan password a)
 
 
