@@ -1,8 +1,6 @@
-Untuk demo website kelompok kami sudah menjadikan website ini online di link :
-
-https://suuiii.com/ezkredit/ (pelanggan)
-
-https://suuiii.com/ezkredit/admin (pegawai dengan username a dan password a)
+Untuk demo website kelompok kami sudah menjadikan website ini online di link : <br>
+- https://suuiii.com/ezkredit/ (pelanggan) <br>
+- https://suuiii.com/ezkredit/admin (pegawai dengan username a dan password a)
 
 <br>
 untuk menjalankan code yang sudah saya submit harus memiliki aplikasi xampp
